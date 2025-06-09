@@ -8,22 +8,27 @@ hop_length: 160
 n_mels: 64
 f_min: 60
 f_max: 7800
-# Dimensions of feature representations.
-feature_d: 2048
+# Dimensions of feature representations, 2048, 1024, 512 (use pca to downsample below 512 if necessary).
+feature_d: 512
 # BYOL parameters.
 proj_size: 256
 proj_dim: 4096
 ema_decay: 0.99
+# PCA
+pca_dim: 128
+pca_fit_samples: 10000
 # Training parameters.
 seed: 42
 bs: 256
 lr: 0.0003
 epochs: 100
 gpus: 1
-num_workers: 8
+num_workers: 12
 # Weight pathname for resuming training.
 resume: 
 # Shape of loh-mel spectrogram [F, T].
 shape: [64, 96]
+# path prefix to data folder
+path_prefix: ../UMMAFormer/
 # Folder to store trained weight files.
 checkpoint_folder: checkpoints
