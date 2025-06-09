@@ -29,6 +29,8 @@ resume:
 # Shape of loh-mel spectrogram [F, T].
 shape: [64, 96]
 # path prefix to data folder
-path_prefix: ../UMMAFormer/
+path_prefix: ../UMMAFormerTest/
+# data set name
+dataset_name: 128_256_256_feat_dim
 # Folder to store trained weight files.
 checkpoint_folder: checkpoints
